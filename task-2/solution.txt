@@ -7,15 +7,15 @@
   touch greeting.txt
 5.echo hello world >> greeting.txt
 6.git add .
-  git commit -u "Added greeting"
+  git commit -m "Added greeting"
 7.git branch intro
   git checkout intro
 8.echo I love Git >> greeting.txt
 9.git add .
-  git commit -u "Added I love Git"
+  git commit -m "Added I love Git"
 10.git checkout main
    git merge intro
 11.git tag v1 main
 12.git add .
    git commit -m "Finished"
-   git push origin main --tags
+   git push -u origin main --tags
