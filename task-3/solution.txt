@@ -1,0 +1,34 @@
+1.mkdir project_files
+2.cd project_files
+  mkdir reports logs data
+3.cd reports
+  touch report1.md report2.md 
+4.cd /home/osc/project_files/logs
+  touch system.log error.log file1.pdf file2.pdf
+5.cd /home/osc/project_files/data
+  touch data.csv info.txt
+6.nano data.csv
+  cd /home/osc/project_files/logs
+  nano system.log 
+  cd /home/osc/project_files/reports
+  nano report1.md
+7.tar -cvf logs_backup.tar /home/osc/project_files/logs
+8.mv logs_backup.tar /home/osc/project_files/
+9.tar -xvf logs_backup.tar /home/osc/project_files
+10.find ~ -type f -name "*.md"
+11.find ~/project_files -type f -name "*.log"
+12.find ~/project_files -type f -name file1.pdf
+13.find ~/project_files -type f -iname "*.pdf"
+14.ind ~/project_files/logs -type f
+15.ln -s ~/project_files/data/data.csv ~/project_files/link_data.csv
+16.nano ~/project_files/link_data.csv
+   cat ~/project_files/link_data.csv
+17.rm ~/project_files/link_data.csv
+18.touch ~/project_files/summary.txt
+   echo Summary Start >> ~/project_files/summary.txt
+19.echo data >> ~/project_files/summary.txt
+20. wc -l < ~/project_files/summary.txt | tee -a ~/project_files/summary.txt
+21.wc -w < /home/osc/project_files/reports/report1.md
+22.wc -c < /home/osc/project_files/logs/system.log >> ~/project_files/summary.txt
+23.find ~/project_files | wc -l >> ~/project_files/summary.txt
+24.cat ~/project_files/summary.txt
